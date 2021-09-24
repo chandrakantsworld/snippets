@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<CodeSnippets  
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
+    <CodeSnippet Format="1.0.0">  
+        <Header>  
+            <Title>XUnit async Fact method</Title>  
+            <Author>Chandrakant Wani</Author>  
+            <Description>Creates a method that will run as an XUnit with async test (fact).</Description>
+            <Shortcut>xafact</Shortcut>
+        </Header>
+        <Imports>  
+            <Import>  
+                <Namespace>Xunit</Namespace>  
+            </Import>  
+        </Imports>  
+        <Snippet>
+            <Declarations>  
+                <Literal>  
+                    <ID>unit</ID>   
+                    <ToolTip>Name of the unit under test.</ToolTip>   
+                    <Default>Unit</Default>   
+                </Literal>
+                <Literal>  
+                    <ID>scenario</ID>   
+                    <ToolTip>Scenario this test exercises.</ToolTip>   
+                    <Default>Scenario</Default>   
+                </Literal>
+                <Literal>  
+                    <ID>expected</ID>   
+                    <ToolTip>Expected result of this test.</ToolTip>   
+                    <Default>Expected</Default>   
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">  
+                <![CDATA[
+                    [Fact]
+                    public async Task $unit$_$scenario$_$expected$()
+                    {
+                        $end$
+                    }
+                ]]>  
+            </Code>  
+        </Snippet>  
+    </CodeSnippet>  
+</CodeSnippets>  
